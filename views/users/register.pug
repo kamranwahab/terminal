@@ -4,18 +4,19 @@ block content
   h1 Register
   form(action="/register",method="post")
         .form-group
-            label(for="name", class="spacer") Name
+            label(for="name", class="spacer") Enter Name
             input#name(type="text", class="form-control", name="name", required, minlength="3", maxlength="30")
         .form-group
-            label(for="email", class="spacer") Email
+            label(for="email", class="spacer") Enter Email
             input#email(type="email", class="form-control", name="email", required)
         .form-group
-            label(for="password", class="spacer") Password
+            label(for="password", class="spacer") Enter Password
             input#price(type="password", class="form-control", name="password", required, minlength="3",)
         .form-group
-            label(for="gender", class="spacer") Gender
+            label(for="gender", class="spacer") Select Gender
             select#gender(class="form-control", name="gender")
                 option Male
                 option Female
+                option Not Specify
         div(class="d-grid gap-2", class="spacer")
             input(type="submit", class="btn btn-lg btn-info" value="Register")
