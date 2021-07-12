@@ -11,7 +11,7 @@ block content
             tr
                 th Name
                 th Price
-                th rating
+                th Rating
                 th Description
                 th Actions
                 if user
@@ -22,23 +22,23 @@ block content
                     td=product.name
                     td=product.price
                     td
-                        if product.rating > 0
+                        if product.Rating > 0
                             span(class="fa fa-star fa-lg checked")
                         else 
                             span(class="fa fa-star fa-lg ")
-                        if product.rating > 1
+                        if product.Rating > 1
                             span(class="fa fa-star fa-lg checked")
                         else 
                             span(class="fa fa-star fa-lg")
-                        if product.rating > 2
+                        if product.Rating > 2
                             span(class="fa fa-star fa-lg checked")
                         else 
                             span(class="fa fa-star fa-lg")
-                        if product.rating > 3
+                        if product.Rating > 3
                             span(class="fa fa-star fa-lg checked")
                         else 
                             span(class="fa fa-star fa-lg")
-                        if product.rating > 4
+                        if product.Rating > 4
                             span(class="fa fa-star fa-lg checked")
                         else 
                             span(class="fa fa-star fa-lg")
@@ -50,29 +50,29 @@ block content
                         a(href="/products/cart/"+product._id, class="btn btn-info") Add To Cart
                     if user
                         td 
-                            form(action="/products/rating",method="post")
+                            form(action="/products/Rating",method="post")
                                 .form-group
                                     input#_id(type="hidden", name="_id", value=product._id)
                                 div(class="form-group row")
                                     .col-sm-6
                                         select#rate(class="form-control", name="rate" value=product.rating)
-                                            if product.rating == 1
+                                            if product.Rating == 1
                                                 option(selected) 1
                                             else 
                                                 option 1
-                                            if product.rating == 2
+                                            if product.Rating == 2
                                                 option(selected) 2
                                             else 
                                                 option 2
-                                            if product.rating == 3
+                                            if product.Rating == 3
                                                 option(selected) 3
                                             else 
                                                 option 3
-                                            if product.rating == 4
+                                            if product.Rating == 4
                                                 option(selected) 4
                                             else 
                                                 option 4
-                                            if product.rating == 5
+                                            if product.Rating == 5
                                                 option(selected) 5
                                             else 
                                                 option 5
