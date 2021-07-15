@@ -42,7 +42,9 @@ app.use(function (err, req, res, next) {
 });
 
 mongoose
-  .connect("mongodb+srv://terminal:terminal@terminal.oujzb.mongodb.net/Terminal", {
+  .connect("mongodb+srv://Kamran:06April@1997@terminal.ec7ag.mongodb.net/Terminal", {
+    //mongodb+srv://terminal:terminal@terminal.oujzb.mongodb.net/Terminal
+   // mongodb+srv://Kamran:06April1997@terminal.ec7ag.mongodb.net/test
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
